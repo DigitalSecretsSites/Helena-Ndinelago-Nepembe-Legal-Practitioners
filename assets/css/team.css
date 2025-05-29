@@ -1,0 +1,370 @@
+/* Team Hero */
+.team-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+  background: linear-gradient(rgba(0, 31, 63, 0.7), rgba(0, 31, 63, 0.7)), 
+              url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+}
+
+.team-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: var(--text-shadow);
+}
+
+.team-hero p {
+  font-size: 1.5rem;
+  text-shadow: var(--text-shadow);
+}
+
+/* Principal Attorney */
+.principal-attorney {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.principal-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+}
+
+.principal-image {
+  text-align: center;
+}
+
+.principal-image img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: var(--box-shadow);
+}
+
+.principal-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-small {
+  padding: 8px 15px;
+  font-size: 0.9rem;
+}
+
+.principal-content h3 {
+  color: var(--navy-blue);
+  margin-bottom: 5px;
+}
+
+.position {
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.bio p {
+  margin-bottom: 15px;
+}
+
+.education, .memberships {
+  margin-top: 30px;
+}
+
+.education h4, .memberships h4 {
+  color: var(--navy-blue);
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.education h4::after, .memberships h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.education ul, .memberships ul {
+  list-style-type: none;
+}
+
+.education ul li, .memberships ul li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.education ul li::before, .memberships ul li::before {
+  content: '•';
+  color: var(--gold);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Associates */
+.associates {
+  padding: 80px 0;
+  background-color: var(--light-gray);
+}
+
+.associates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.associate-card {
+  perspective: 1000px;
+  height: 400px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.associate-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  padding: 30px;
+  text-align: center;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.associate-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid var(--gold);
+}
+
+.associate-card h3 {
+  color: var(--navy-blue);
+  margin-bottom: 5px;
+}
+
+.specialties {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.specialties span {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--gold);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.btn-flip {
+  background: var(--gold);
+  color: var(--navy-blue);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+  margin-top: 20px;
+}
+
+.btn-flip:hover {
+  background: var(--navy-blue);
+  color: var(--gold);
+}
+
+.card-back .bio {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.card-back .contact {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.card-back .contact a {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--navy-blue);
+  transition: var(--transition);
+}
+
+.card-back .contact a:hover {
+  color: var(--gold);
+}
+
+.card-back .contact a i {
+  margin-right: 8px;
+  color: var(--gold);
+}
+
+/* Support Staff */
+.support-staff {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.staff-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.staff-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.staff-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid var(--gold);
+}
+
+.staff-card h3 {
+  color: var(--navy-blue);
+  margin-bottom: 5px;
+}
+
+.staff-card .bio {
+  margin: 20px 0;
+}
+
+.staff-card .contact a {
+  color: var(--navy-blue);
+  transition: var(--transition);
+}
+
+.staff-card .contact a:hover {
+  color: var(--gold);
+}
+
+.staff-card .contact a i {
+  margin-right: 8px;
+  color: var(--gold);
+}
+
+/* Call to Action */
+.cta {
+  padding: 80px 0;
+  background: linear-gradient(rgba(0, 31, 63, 0.9), rgba(0, 31, 63, 0.9)), 
+              url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+  color: var(--white);
+  text-align: center;
+}
+
+.cta h2 {
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.cta p {
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .principal-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .principal-image {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .team-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .team-hero p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .associate-card {
+    height: auto;
+  }
+  
+  .card-inner {
+    transform-style: flat;
+  }
+  
+  .card-front, .card-back {
+    position: relative;
+    backface-visibility: visible;
+    transform: none;
+  }
+  
+  .associate-card:hover .card-inner {
+    transform: none;
+  }
+  
+  .btn-flip {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .team-hero {
+    height: 50vh;
+  }
+  
+  .team-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .team-hero p {
+    font-size: 1rem;
+  }
+}
